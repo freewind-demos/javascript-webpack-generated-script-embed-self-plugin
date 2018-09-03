@@ -1,13 +1,13 @@
-Webpack Config File Demo
-========================
+JavaScript Webpack "html-webpack-plugin" Demo
+=============================================
 
-Put all settings in `webpack.config.js`
+It will generate a simple html page contains the generated bundle.js.
 
 ```
 npm install
 npm run demo
 ```
 
-Then open `index.html` in your browser.
+It will open the generated `index.html` automatically.
 
 ![demo](./images/demo.jpg)

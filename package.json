@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "demo": "webpack && open index.html"
+    "demo": "webpack"
   },
   "dependencies": {
     "css-loader": "^0.23.1",

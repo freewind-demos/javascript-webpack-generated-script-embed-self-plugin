@@ -1,4 +1,4 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HelloPlugin = require('./src/hello-plugin')
 
 module.exports = {
     entry: './entry.js',
@@ -6,5 +6,5 @@ module.exports = {
         path: __dirname,
         filename: 'bundle.js'
     },
-    plugins: [new HtmlWebpackPlugin()]
+    plugins: [new HelloPlugin({name: 'webpack'})]
 }

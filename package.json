@@ -2,9 +2,6 @@
   "scripts": {
     "demo": "webpack && open index.html"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "css-loader": "^0.23.1",
     "style-loader": "^0.13.1"

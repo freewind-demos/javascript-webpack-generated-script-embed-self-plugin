@@ -4,9 +4,10 @@ Webpack Config File Demo
 Put all settings in `webpack.config.js`
 
 ```
-npm install -g webpack
 npm install
-webpack
+npm run demo
 ```
 
 Then open `index.html` in your browser.
+
+![demo](./images/demo.jpg)

@@ -3,7 +3,7 @@ const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
 const HelloPlugin = require('./src/generated-script-reposition-plugin')
 
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     entry: './entry.js',
     output: {
         path: __dirname,
@@ -17,7 +17,8 @@ module.exports = {
             inline: ['bundle.js']
         }),
         new HelloPlugin({
-            targetPlaceholder: '<<placeholder>>'
+            targetPlaceholder: '<<placeholder>>',
+            errorIfTargetPlaceholderNotFound: true
         })
     ]
 }

@@ -1,5 +1,5 @@
-JavaScript Webpack Generated Script Embed Demo
-==============================================
+JavaScript Webpack Generated Script Embed Self Demo
+===================================================
 
 如何写一个插件，把由webpack生成的bundle代码，替换到其内部的指定位置，以实现某些特殊效果，如：
 
@@ -20,5 +20,9 @@ npm run demo
     const generated = '---generatedBundleScript---'
     ```
 
-2. `webpack.config.js`中，`mode`要设为`production`，使得生成的js代码为一行。否则替换后的多行代码会出错
+2. 由于webpack生成的bundle代码可能有多行以及各种字符串，替换之后很可能出现语法错误。
+为了避免这种情况， 在替换前会先将其转码为base64，替换之后，会在外面包一个浏览器都支持的`atob`(将base64转为正常字符串），
+这样就可以避免语法错误。
+
+主要代码在`src/generated-script-embed-self-plugin.js`中，可直接阅读。
 

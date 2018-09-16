@@ -1,6 +1,4 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
-const HelloPlugin = require('./src/generated-script-reposition-plugin')
+const HelloPlugin = require('./src/generated-script-embed-self-plugin')
 
 module.exports = {
     mode: 'production',
@@ -10,14 +8,9 @@ module.exports = {
         filename: 'bundle.js'
     },
     plugins: [
-        new HtmlWebpackPlugin({
-            template: 'template.html'
-        }),
-        new ScriptExtHtmlWebpackPlugin({
-            inline: ['bundle.js']
-        }),
         new HelloPlugin({
-            targetPlaceholder: '<<placeholder>>',
+            assetName: 'bundle.js',
+            targetPlaceholder: '---generatedBundleScript---',
             errorIfTargetPlaceholderNotFound: true
         })
     ]
